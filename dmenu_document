@@ -1,0 +1,11 @@
+#! /usr/bin/dash
+
+
+cd ~/Documents
+file=$(find ./ | dmenu -l 8 -p 'Document:')
+
+
+case $file in "") exit;; esac
+
+
+$(printf "chromium\nzathura\nleafpad" | dmenu) "${file}" &
