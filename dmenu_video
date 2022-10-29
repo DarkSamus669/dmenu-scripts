@@ -1,0 +1,9 @@
+#! /usr/bin/dash
+
+
+cd ~/Videos
+file=$(find ./ | dmenu -l 8 -p 'Video:')
+
+
+#mpv --video-unscaled "${file}" &
+$(printf "mp\nffplay\nchromium" | dmenu) "${file}" &
