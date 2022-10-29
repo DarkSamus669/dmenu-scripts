@@ -1,0 +1,12 @@
+#! /usr/bin/dash
+
+
+cd ~/Music
+file=$(find ./ | dmenu -l 8 -p 'Music:')
+
+
+case $file in "") exit;; esac
+
+
+st -e mpv "${file}"
+#$(printf "" | dmenu) "${file}"
