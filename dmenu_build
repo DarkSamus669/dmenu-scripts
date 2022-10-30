@@ -1,0 +1,18 @@
+#! /usr/bin/dash
+
+
+cd $HOME
+
+
+project=$(cat ${HOME}/.config/dmenu/dmenu_build | dmenu -l 8 -p 'Build:')
+[ -z "${project}" ] && exit
+
+
+cd "${project}"
+
+
+cmd=$(printf 'make all -j2\nmake clean\nsudo make install' | dmenu -l 3)
+[ -z "${cmd}" ] && exit
+
+
+st -e dash -c "${cmd} && read -p ':' '' "
