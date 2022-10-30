@@ -1,8 +1,8 @@
 #! /usr/bin/dash
 
 
-cd /home/shivans/
-file=$(cat /home/shivans/.config/dmenu/dmenu_config | dmenu -l 8 -p 'Config:')
+cd $HOME
+file=$(cat ${HOME}/.config/dmenu/dmenu_config | dmenu -l 8 -p 'Config:')
 
 
 case $file in "") exit;; esac
