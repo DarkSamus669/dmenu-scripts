@@ -1,7 +1,7 @@
 #! /usr/bin/dash
 
 
-cd ~/Documents
+cd ${HOME}/Documents
 file=$(find ./ | dmenu -l 8 -p 'Document:')
 
 
