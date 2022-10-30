@@ -1,4 +1,5 @@
 
+## Change path "/home/shivans/Scripts/dmenu/" to where you've installed scripts.
 
-alt + super + {v,i,o,n,m}
-	/home/shivans/Scripts/dmenu/dmenu_{video,picture,config,music,manpage}
+alt + super + {v,i,d,o,n,m}
+	/home/shivans/Scripts/dmenu/dmenu_{video,picture,document,config,music,manpage}
