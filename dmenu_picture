@@ -1,7 +1,7 @@
 #! /usr/bin/dash
 
 
-cd ~/Pictures
+cd ${HOME}/Pictures
 file=$(find ./ | dmenu -l 8 -p 'Picture:')
 
 
