@@ -1,0 +1,4 @@
+
+
+alt + super + {v,i,o,n,m}
+	/home/shivans/Scripts/dmenu/dmenu_{video,picture,config,music,manpage}
