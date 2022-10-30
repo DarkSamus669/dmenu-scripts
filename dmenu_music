@@ -1,7 +1,7 @@
 #! /usr/bin/dash
 
 
-cd ~/Music
+cd ${HOME}/Music
 file=$(find ./ | dmenu -l 8 -p 'Music:')
 
 
