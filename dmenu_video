@@ -1,7 +1,7 @@
 #! /usr/bin/dash
 
 
-cd ~/Videos
+cd ${HOME}/Videos
 file=$(find ./ | dmenu -l 8 -p 'Video:')
 
 
