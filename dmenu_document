@@ -2,10 +2,10 @@
 
 
 cd ${HOME}/Documents
+
+
 file=$(find ./ | dmenu -l 8 -p 'Document:')
-
-
-case $file in "") exit;; esac
+[ -z "${file}" ] && exit
 
 
 $(printf "chromium\nzathura\nleafpad" | dmenu) "${file}" &

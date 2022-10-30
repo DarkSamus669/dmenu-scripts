@@ -2,10 +2,10 @@
 
 
 cd ${HOME}/Pictures
+
+
 file=$(find ./ | dmenu -l 8 -p 'Picture:')
-
-
-case $file in "") exit;; esac
+[ -z "${file}" ] && exit
 
 
 feh "${file}" &

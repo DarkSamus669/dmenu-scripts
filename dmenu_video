@@ -2,10 +2,10 @@
 
 
 cd ${HOME}/Videos
+
+
 file=$(find ./ | dmenu -l 8 -p 'Video:')
-
-
-case $file in "") exit;; esac
+[ -z "${file}" ] && exit
 
 
 mpv --video-unscaled "${file}" &

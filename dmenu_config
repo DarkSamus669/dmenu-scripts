@@ -2,10 +2,10 @@
 
 
 cd $HOME
+
+
 file=$(cat ${HOME}/.config/dmenu/dmenu_config | dmenu -l 8 -p 'Config:')
-
-
-case $file in "") exit;; esac
+[ -z "${file}" ] && exit
 
 
 st -e nano "${file}" &

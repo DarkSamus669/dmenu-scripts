@@ -2,10 +2,10 @@
 
 
 cd ${HOME}/Music
+
+
 file=$(find ./ | dmenu -l 8 -p 'Music:')
-
-
-case $file in "") exit;; esac
+[ -z "${file}" ] && exit
 
 
 st -e mpv "${file}" &
