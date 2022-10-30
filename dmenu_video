@@ -8,5 +8,5 @@ file=$(find ./ | dmenu -l 8 -p 'Video:')
 case $file in "") exit;; esac
 
 
-#mpv --video-unscaled "${file}" &
-$(printf "mp\nffplay\nchromium" | dmenu) "${file}" &
+mpv --video-unscaled "${file}" &
+#$(printf "mpv\nffplay" | dmenu) "${file}" &

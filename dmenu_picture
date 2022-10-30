@@ -8,5 +8,5 @@ file=$(find ./ | dmenu -l 8 -p 'Picture:')
 case $file in "") exit;; esac
 
 
-#feh --no-xinerama "${file}" &
-$(printf "feh\nmirage\nmtpaint\nchromium" | dmenu) "${file}" &
+feh "${file}" &
+#$(printf "feh\nmirage\nmtpaint" | dmenu) "${file}" &
