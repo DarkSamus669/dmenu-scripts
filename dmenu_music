@@ -8,5 +8,5 @@ file=$(find ./ | dmenu -l 8 -p 'Music:')
 [ -z "${file}" ] && exit
 
 
-st -e mpv "${file}" &
-#$(printf "ffplay\nst -e mpv\ndeadbeef" | dmenu) "${file}" &
+#st -e mpv "${file}" &
+$(printf "ffplay\nst -e mpv\ndeadbeef\nchromium" | dmenu) "${file}" &

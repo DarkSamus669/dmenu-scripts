@@ -8,5 +8,5 @@ file=$(cat ${HOME}/.config/dmenu/dmenu_config | dmenu -l 8 -p 'Config:')
 [ -z "${file}" ] && exit
 
 
-st -e nano "${file}" &
-#st -e $(printf "vim\nnano" | dmenu) "${file}" &
+#st -e nano "${file}" &
+$(printf "st -e nano\nleafpad\ngeany" | dmenu) "${file}" &
