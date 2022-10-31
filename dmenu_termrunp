@@ -1,0 +1,8 @@
+#! /usr/bin/dash
+
+
+cmd=$(dmenu_path | dmenu -l 8 -p '~>')
+[ -z "${cmd}" ] && exit
+
+
+st -e dash -c "${cmd} ; read -p ':' '' " &

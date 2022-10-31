@@ -12,6 +12,8 @@ Scripts to open Video, Music, Documents, Config's, etc.
 | dmenu_wallpaper    | _set wallpaper available in specified wallpaper dirs_
 | dmenu_build        | _build project's on fly_
 | dmenu_config       | _prompt to open specified config file in specified editor_
+| dmenu_termrun      | _run in terminal_
+| dmenu_termrunp     | _run in terminal and pause at the end_
 
 
 _edit scripts according to your need._
