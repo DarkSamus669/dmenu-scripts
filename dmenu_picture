@@ -4,7 +4,7 @@
 cd ${HOME}/Pictures
 
 
-file=$(find ./ | dmenu -l 8 -p 'Picture:')
+file=$(find ./ | dmenu -i -l 8 -p 'Picture:')
 [ -z "${file}" ] && exit
 
 

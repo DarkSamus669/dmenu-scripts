@@ -4,7 +4,7 @@
 cd ${HOME}/Videos
 
 
-file=$(find ./ | dmenu -l 8 -p 'Video:')
+file=$(find ./ | dmenu -i -l 8 -p 'Video:')
 [ -z "${file}" ] && exit
 
 
