@@ -16,4 +16,4 @@ Scripts to open Video, Music, Documents, Config's, etc.
 | dmenu_termrunp     | _run in terminal and pause at the end_
 
 
-_edit scripts according to your need._
+_Customization can be done by editing scripts, like adding or changing directories used in find command._
