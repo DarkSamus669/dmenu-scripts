@@ -4,7 +4,6 @@
 manpage=$(apropos . | awk '{ print $1 " " $2 }' | dmenu -p 'Man:' -l 8 | awk '{ print $2 " " $1 }' | tr -d '()')
 #manpage=$(apropos . | dmenu -l 8 -p 'Man:' | awk '{ print $2" "$1 }' | tr -d '()')
 
-
 [ -z "${manpage}" ] && exit
 
 
