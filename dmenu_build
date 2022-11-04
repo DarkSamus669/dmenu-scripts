@@ -15,4 +15,4 @@ cmd=$(printf 'make all -j2\nmake clean\nsudo make install' | dmenu -l 3)
 [ -z "${cmd}" ] && exit
 
 
-st -e dash -c "${cmd} ; read -p ':' '' "
+st -e dash -c "${cmd}; read -p ':' ''"
