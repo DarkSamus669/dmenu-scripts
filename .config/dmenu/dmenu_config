@@ -2,6 +2,7 @@
 ./.config/sxhkd/sxhkdrc
 ./.config/dmenu/dmenu_config
 ./.config/dmenu/dmenu_build
+./.config/dmenu/dmenu_web-bookmarks
 ./Scripts/dmenu/dmenu_video
 ./Scripts/dmenu/dmenu_picture
 ./Scripts/dmenu/dmenu_music
@@ -10,6 +11,7 @@
 ./Scripts/dmenu/dmenu_document
 ./Scripts/dmenu/dmenu_manpage
 ./Scripts/dmenu/dmenu_wallpaper
+./Scripts/dmenu/dmenu_web-bookmarks
 ./Scripts/dmenu/dmenu_termrun
 ./Scripts/dmenu/dmenu_termrunp
 ./Downloads/.1/SUCKLESS/dwm/dwm/config.h
