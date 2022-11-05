@@ -1,11 +1,11 @@
 #! /usr/bin/dash
 
 
-cd ${HOME}/Documents
+cd $HOME/Documents
 
 
 file=$(find ./ | dmenu -i -l 8 -p 'Document:')
-[ -z "${file}" ] && exit
+[ -z "$file" ] && exit
 
 
-$(printf "chromium\nzathura\nleafpad" | dmenu) "${file}" &
+$(printf "chromium\nzathura\nleafpad" | dmenu) "$file" &

@@ -1,15 +1,15 @@
 #! /usr/bin/dash
 
 
-cd ${HOME}/.local/share/WALLPAPER
+cd $HOME/.local/share/WALLPAPER
 
 
 wall=$(find ./ /usr/share/wallpaper/ | dmenu -i -l 8 -p 'Wallpaper:')
-[ -z "${wall}" ] && exit
+[ -z "$wall" ] && exit
 
 
 mode=$(printf "fill\nscale\nmax\ntile\ncenter" | dmenu)
-[ -z "${mode}" ] && exit
+[ -z "$mode" ] && exit
 
 
-feh --bg-${mode} "${wall}" &
+feh --bg-$mode "$wall" &

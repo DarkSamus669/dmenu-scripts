@@ -4,9 +4,9 @@
 cd $HOME
 
 
-file=$(cat ${HOME}/.config/dmenu/dmenu_config | dmenu -i -l 8 -p 'Config:')
-[ -z "${file}" ] && exit
+file=$(cat $HOME/.config/dmenu/dmenu_config | dmenu -i -l 8 -p 'Config:')
+[ -z "$file" ] && exit
 
 
-#st -e nano "${file}" &
-$(printf "st -e nano\nleafpad\ngeany" | dmenu) "${file}" &
+#st -e nano "$file" &
+$(printf "st -e nano\nleafpad\ngeany" | dmenu) "$file" &

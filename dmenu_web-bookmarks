@@ -2,9 +2,9 @@
 
 
 
-web=$(cat ${HOME}/.config/dmenu/dmenu_web-bookmarks | dmenu -i -l 8 -p 'Web:')
-[ -z "${web}" ] && exit
+web=$(cat $HOME/.config/dmenu/dmenu_web-bookmarks | dmenu -i -l 8 -p 'Web:')
+[ -z "$web" ] && exit
 
 
-#chromium "${web}" &
-$(printf "chromium\ndillo\nst -e elinks" | dmenu) "${web}" &
+#chromium "$web" &
+$(printf "chromium\ndillo\nst -e elinks" | dmenu) "$web" &

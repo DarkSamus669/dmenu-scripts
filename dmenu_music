@@ -1,12 +1,12 @@
 #! /usr/bin/dash
 
 
-cd ${HOME}/Music
+cd $HOME/Music
 
 
 file=$(find ./ | dmenu -i -l 8 -p 'Music:')
-[ -z "${file}" ] && exit
+[ -z "$file" ] && exit
 
 
-#st -e mpv "${file}" &
-$(printf "ffplay\nst -e mpv\ndeadbeef\nchromium" | dmenu) "${file}" &
+#st -e mpv "$file" &
+$(printf "ffplay\nst -e mpv\ndeadbeef\nchromium" | dmenu) "$file" &

@@ -4,15 +4,15 @@
 cd $HOME
 
 
-project=$(cat ${HOME}/.config/dmenu/dmenu_build | dmenu -i -l 8 -p 'Build:')
-[ -z "${project}" ] && exit
+project=$(cat $HOME/.config/dmenu/dmenu_build | dmenu -i -l 8 -p 'Build:')
+[ -z "$project" ] && exit
 
 
-cd "${project}"
+cd "$project"
 
 
 cmd=$(printf 'make all -j2\nmake clean\nsudo make install' | dmenu -l 3)
-[ -z "${cmd}" ] && exit
+[ -z "$cmd" ] && exit
 
 
-st -e dash -c "${cmd}; read -p ':' ''"
+st -e dash -c "$cmd; read -p ':' ''"

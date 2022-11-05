@@ -2,8 +2,8 @@
 
 
 cmd=$(dmenu_path | dmenu -l 8 -p '~>')
-[ -z "${cmd}" ] && exit
+[ -z "$cmd" ] && exit
 
 
-#st -e "${cmd}" &
-st -e dash -c "${cmd}" &
+#st -e "$cmd" &
+st -e dash -c "$cmd" &

@@ -1,12 +1,12 @@
 #! /usr/bin/dash
 
 
-cd ${HOME}/Videos
+cd $HOME/Videos
 
 
 file=$(find ./ | dmenu -i -l 8 -p 'Video:')
-[ -z "${file}" ] && exit
+[ -z "$file" ] && exit
 
 
-#mpv "${file}" &
-$(printf "mpv\nffplay\nchromium" | dmenu) "${file}" &
+#mpv "$file" &
+$(printf "mpv\nffplay\nchromium" | dmenu) "file" &

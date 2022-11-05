@@ -1,12 +1,12 @@
 #! /usr/bin/dash
 
 
-cd ${HOME}/Pictures
+cd $HOME/Pictures
 
 
 file=$(find ./ | dmenu -i -l 8 -p 'Picture:')
-[ -z "${file}" ] && exit
+[ -z "$file" ] && exit
 
 
-#feh "${file}" &
-$(printf "feh\nmirage\nmtpaint\nchromium" | dmenu) "${file}" &
+#feh "$file" &
+$(printf "feh\nmirage\nmtpaint\nchromium" | dmenu) "$file" &
