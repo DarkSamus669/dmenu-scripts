@@ -7,4 +7,4 @@ manpage=$(apropos . | awk '{ print $1 " " $2 }' | dmenu -p 'Man:' -l 8)
 [ -z "$manpage" ] && exit
 
 
-st -e man $manpage &
+st -t "$manpage" -e man $manpage &
