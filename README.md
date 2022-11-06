@@ -22,11 +22,14 @@ _Customization can be done by editing scripts, like adding or changing directori
 
 ## Recommended
 
-### applications:
+**_applications:_**
 ```dmenu``` ```st``` ```urxvt```
 
-### manpages:
+
+**_manpages:_**
 ```find(1)``` ```dmenu(1)``` ```st(1)```
 
-### dmenu_patches:
+
+**_dmenu_patches:_**
 ```separator```
+​
