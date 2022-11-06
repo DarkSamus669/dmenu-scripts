@@ -18,3 +18,15 @@ Scripts to open Video, Music, Documents, Config's, etc.
 
 
 _Customization can be done by editing scripts, like adding or changing directories used in find command._
+
+
+## Recommended
+
+### applications:
+```dmenu``` ```st``` ```urxvt```
+
+### manpages:
+```find(1)``` ```dmenu(1)``` ```st(1)```
+
+### dmenu_patches:
+```separator```
