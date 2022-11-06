@@ -5,6 +5,5 @@ cmd=$(dmenu_path | dmenu -l 8 -p '~>')
 [ -z "$cmd" ] && exit
 
 
-
 st -t "$cmd" -e dash -c "$cmd; read -p ':' ''" &
 #st -t "$cmd" -e dash -c "echo '$ $cmd'; $cmd; read -p ':' ''" &
