@@ -6,4 +6,4 @@ cmd=$(dmenu_path | dmenu -l 8 -p '~>')
 
 
 #st -e "$cmd" &
-st -e dash -c "$cmd" &
+st -t "$cmd" -e dash -c "$cmd" &
