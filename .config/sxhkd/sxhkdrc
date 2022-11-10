@@ -1,8 +1,14 @@
 
 ## Change path "/home/shivans/Scripts/dmenu/" to where you've installed scripts.
 
+
 {alt + shift,super} + p
 	/home/shivans/Scripts/dmenu/dmenu_{termrun,termrunp}
 
-alt + super + {v,i,d,o,n,w,m,g,b}
-	/home/shivans/Scripts/dmenu/dmenu_{video,picture,document,config,music,wallpaper,manpage,web-bookmarks,build}
+
+alt + super + {v,i,d,o,n}
+	/home/shivans/Scripts/dmenu/dmenu_{video,picture,document,config,music}
+
+
+alt + super + {w,m,g,b}
+	/home/shivans/Scripts/dmenu/dmenu_{wallpaper,manpage,web-bookmarks,build}
