@@ -7,3 +7,6 @@ cmd=$(dmenu_path | dmenu -l 8 -p '~>')
 
 #st -e "$cmd" &
 st -t "$cmd" -e dash -c "$cmd" &
+
+#urxvt -e "$cmd" &
+#urxvt -T "$cmd" -e dash -c "$cmd" &
