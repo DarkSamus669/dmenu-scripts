@@ -7,4 +7,4 @@ web=$(cat $HOME/.config/dmenu/dmenu_web-bookmarks | dmenu -i -l 8 -p 'Web:')
 
 
 #chromium "$web" &
-$(printf "chromium\ndillo\nst -e elinks" | dmenu) "$web" &
+$(printf "chromium\nseamonkey\ndillo\nst -e elinks" | dmenu) "$web" &
