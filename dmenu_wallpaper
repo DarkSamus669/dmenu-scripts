@@ -1,7 +1,7 @@
 #! /usr/bin/dash
 
 
-cd "$HOME/.local/share/WALLPAPER"
+cd "$HOME/Pictures/Wallpapers"
 
 
 wall=$(find ./ /usr/share/wallpaper/ | dmenu -i -l 8 -p 'Wallpaper:')
