@@ -8,8 +8,14 @@ wall=$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | dmenu -i -l 8 -
 [ -z "$wall" ] && exit
 
 
+# feh
 mode=$(printf "fill\nscale\nmax\ntile\ncenter" | dmenu)
+
+# hsetroot
+#mode=$(printf "fill\nfull\nextend\ntile\ncenter\ncover | dmenu)
+
 [ -z "$mode" ] && exit
 
 
 feh --bg-$mode "$wall" &
+#hsetroot -$mode "$wall" &
