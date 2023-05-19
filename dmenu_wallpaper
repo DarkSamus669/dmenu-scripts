@@ -4,7 +4,7 @@
 cd "$HOME/Pictures/Wallpapers"
 
 
-wall=$(find ./ /usr/share/wallpaper/ -type f | dmenu -i -l 8 -p 'Wallpaper:')
+wall=$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | dmenu -i -l 8 -p 'Wallpaper:')
 [ -z "$wall" ] && exit
 
 
