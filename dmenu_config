@@ -1,10 +1,10 @@
 #! /usr/bin/dash
 
 
-cd $HOME
+cd "$HOME"
 
 
-file=$(cat $HOME/.config/dmenu/dmenu_config | dmenu -i -l 8 -p 'Config:')
+file=$(cat "$HOME/.config/dmenu/dmenu_config" | dmenu -i -l 8 -p 'Config:')
 [ -z "$file" ] && exit
 
 

@@ -1,10 +1,10 @@
 #! /usr/bin/dash
 
 
-cd $HOME/Music
+cd "$HOME/Music"
 
 
-file=$(find ./ | dmenu -i -l 8 -p 'Music:')
+file=$(find ./ | sort | dmenu -i -l 8 -p 'Music:')
 [ -z "$file" ] && exit
 
 

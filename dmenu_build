@@ -1,10 +1,10 @@
 #! /usr/bin/dash
 
 
-cd $HOME
+cd "$HOME"
 
 
-project=$(cat $HOME/.config/dmenu/dmenu_build | dmenu -i -l 8 -p 'Build:')
+project=$(cat "$HOME/.config/dmenu/dmenu_build" | dmenu -i -l 8 -p 'Build:')
 [ -z "$project" ] && exit
 
 

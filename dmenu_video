@@ -1,10 +1,10 @@
 #! /usr/bin/dash
 
 
-cd $HOME/Videos
+cd "$HOME/Videos"
 
 
-file=$(find ./ | dmenu -i -l 8 -p 'Video:')
+file=$(find ./ | sort | dmenu -i -l 8 -p 'Video:')
 [ -z "$file" ] && exit
 
 
