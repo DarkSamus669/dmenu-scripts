@@ -1,0 +1,24 @@
+#! /usr/bin/dash
+
+
+
+web_search="$(dmenu -i -p 'Web Search:')"
+[ -z "$web_search" ] && exit
+
+search_engine="$(cat $HOME/.config/dmenu/dmenu_web-search | dmenu -i -l 8 -p 'Search in:')"
+[ -z "$search_engine"] && exit
+
+
+case "$search_engine" in
+	# wikipedia page search
+	"https://en.wikipedia.org/w/index.php?fulltext=1&search=&title=Special%3ASearch&ns0=1") web_search_url="https://en.wikipedia.org/w/index.php?fulltext=1&search=${web_search}&title=Special%3ASearch&ns0=1";;
+	# youtube channel search
+	"https://www.youtube.com/results?search_query=&sp=EgIQAg%253D%253D" ) web_search_url="https://www.youtube.com/results?search_query=${web_search}&sp=EgIQAg%253D%253D";;
+
+	# else
+	*) web_search_url="$search_engine${web_search}"
+esac
+
+
+chromium "$web_search_url" &
+#$(printf "chromium\nseamonkey\ndillo\nst -e elinks" | dmenu) "$web_search_url" &

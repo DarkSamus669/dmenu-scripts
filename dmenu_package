@@ -1,0 +1,10 @@
+#! /usr/bin/dash
+
+
+
+package=$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -u | dmenu -p 'Package:' -l 8 | awk '{ print $1}')
+[ -z "$package" ] && exit
+
+
+#st -t "$package" -e dash -c "apt show $package ; read -p ':' ''"  &
+st -t "$package" -e dash -c "$(printf "apt show\ndpkg -L | less" | dmenu -l 2) $package ; read -p ':' ''"  &
