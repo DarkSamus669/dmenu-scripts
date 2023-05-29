@@ -1,4 +1,4 @@
-#! /usr/bin/dash
+#!/bin/sh
 
 
 cmd=$(dmenu_path | dmenu -l 8 -p '~>')
