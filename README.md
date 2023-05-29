@@ -1,4 +1,4 @@
-# dmenu-openers
+# dmenu-scripts
 Scripts to open Video, Music, Documents, Config's, etc.
 
 
