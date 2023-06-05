@@ -4,9 +4,9 @@
 cd "$HOME/Pictures"
 
 
-file=$(find ./ | sort | dmenu -i -l 8 -p 'Picture:')
+file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Picture:')"
 [ -z "$file" ] && exit
 
 
 #feh "$file" &
-$(printf "feh\nmirage\nmtpaint\nchromium" | dmenu) "$file" &
+$(echo "feh\nmirage\nmtpaint\nchromium" | dmenu) "$file" &

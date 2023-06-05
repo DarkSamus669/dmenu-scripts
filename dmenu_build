@@ -4,14 +4,14 @@
 cd "$HOME"
 
 
-project=$(cat "$HOME/.config/dmenu/dmenu_build" | dmenu -i -l 8 -p 'Build:')
+project="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.config/dmenu/dmenu_build")"
 [ -z "$project" ] && exit
 
 
 cd "$project"
 
 
-cmd=$(printf 'make all -j2\nmake clean\nsudo make install' | dmenu -l 3)
+cmd="$(echo "make all -j2\nmake clean\nsudo make install" | dmenu -l 3)"
 [ -z "$cmd" ] && exit
 
 

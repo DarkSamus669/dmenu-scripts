@@ -1,9 +1,8 @@
 #!/bin/sh
 
 
-manpage=$(apropos . | sort | awk '{ print $1 " " $2 }' | dmenu -p 'Man:' -l 8)
-#manpage=$(apropos . | dmenu -l 8 -p 'Man:' | awk '{ print $1 " " $2 }')
 
+manpage="$(apropos . | sort | awk '{ print $1 " " $2 }' | dmenu -p 'Man:' -l 8)"
 [ -z "$manpage" ] && exit
 
 

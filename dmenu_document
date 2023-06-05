@@ -4,8 +4,8 @@
 cd "$HOME/Documents"
 
 
-file=$(find ./ | sort | dmenu -i -l 8 -p 'Document:')
+file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Document:')"
 [ -z "$file" ] && exit
 
 
-$(printf "chromium\nqpdfview\nzathura\nleafpad" | dmenu) "$file" &
+$(echo "chromium\nqpdfview\nzathura\nleafpad" | dmenu) "$file" &

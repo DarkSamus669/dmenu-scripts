@@ -4,15 +4,15 @@
 cd "$HOME/Pictures/Wallpapers"
 
 
-wall=$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Wallpaper:')
+wall="$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Wallpaper:')"
 [ -z "$wall" ] && exit
 
 
 # feh
-mode=$(printf "fill\nscale\nmax\ntile\ncenter" | dmenu)
+mode=$(echo "fill\nscale\nmax\ntile\ncenter" | dmenu)
 
 # hsetroot
-#mode=$(printf "fill\nfull\nextend\ntile\ncenter\ncover | dmenu)
+#mode=$(echo "fill\nfull\nextend\ntile\ncenter\ncover | dmenu)
 
 [ -z "$mode" ] && exit
 

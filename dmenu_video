@@ -4,9 +4,9 @@
 cd "$HOME/Videos"
 
 
-file=$(find ./ | sort | dmenu -i -l 8 -p 'Video:')
+file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Video:')"
 [ -z "$file" ] && exit
 
 
 #mpv "$file" &
-$(printf "mpv\nffplay\nchromium" | dmenu) "file" &
+$(echo "mpv\nffplay\nchromium" | dmenu) "$file" &
