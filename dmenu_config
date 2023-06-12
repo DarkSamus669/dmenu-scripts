@@ -12,4 +12,4 @@ file="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.config/dmenu/dmenu_config")"
 editor="$(echo 'st -e nano\nleafpad\ngeany' | dmenu)"
 [ -z "$editor" ] && exit
 
-$editor "$file"
+$editor "$file" &

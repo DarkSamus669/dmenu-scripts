@@ -10,4 +10,4 @@ url="$(dmenu -i -l 8 -p 'Web:' < "$HOME/.config/dmenu/dmenu_web-bookmarks")"
 web_browser="$(echo 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu)"
 [ -z "$web_browser" ] && exit
 
-$web_browser "$url"
+$web_browser "$url" &

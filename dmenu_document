@@ -11,4 +11,4 @@ file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Document:')"
 document_viewer="$(echo 'chromium\nqpdfview\nzathura\nleafpad' | dmenu)"
 [ -z "$document_viewer" ] && exit
 
-$document_viewer "$file"
+$document_viewer "$file" &
