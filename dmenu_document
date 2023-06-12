@@ -8,4 +8,7 @@ file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Document:')"
 [ -z "$file" ] && exit
 
 
-$(echo "chromium\nqpdfview\nzathura\nleafpad" | dmenu) "$file" &
+document_viewer="$(echo 'chromium\nqpdfview\nzathura\nleafpad' | dmenu)"
+[ -z "$document_viewer" ] && exit
+
+$document_viewer "$file"

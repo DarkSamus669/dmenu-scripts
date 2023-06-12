@@ -2,9 +2,12 @@
 
 
 
-package="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort | dmenu -i -p 'Package:' -l 8 | awk '{ print $1 }')"
+package="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -s | dmenu -i -p 'Package:' -l 8 | awk '{ print $1 }')"
 [ -z "$package" ] && exit
 
 
-#st -t "$package" -e dash -c "apt show $package ; read -p ':' ''"  &
-st -t "$package" -e dash -c "$(echo "apt show\ndpkg -L | less" | dmenu -l 2) $package ; read -p ':' ''"  &
+#package_command="apt show"
+package_command="$(echo 'apt show\ndpkg -L | less' | dmenu -l 2)"
+[ -z "$package_command" ] && exit
+
+st -t "$package" -e dash -c "$package_command $package ; read -p ':' ''"  &

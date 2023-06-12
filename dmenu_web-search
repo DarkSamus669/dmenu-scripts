@@ -12,5 +12,8 @@ search_engine="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.config/dmenu/dmenu_web-
 web_search_url="$(echo "$search_engine" | awk -v web_search="$web_search" '{print $1 web_search $2}')"
 
 
-chromium "$web_search_url" &
-#$(printf "chromium\nseamonkey\ndillo\nst -e elinks" | dmenu) "$web_search_url" &
+web_browser="chromium"
+#web_browser="$(printf 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu) 
+[ -z "$web_browser" ] && exit
+
+$web_browser "$web_search_url" &

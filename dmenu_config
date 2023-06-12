@@ -8,5 +8,8 @@ file="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.config/dmenu/dmenu_config")"
 [ -z "$file" ] && exit
 
 
-#st -e nano "$file" &
-$(echo "st -e nano\nleafpad\ngeany" | dmenu) "$file" &
+#editor="st -e nano"
+editor="$(echo 'st -e nano\nleafpad\ngeany' | dmenu)"
+[ -z "$editor" ] && exit
+
+$editor "$file"

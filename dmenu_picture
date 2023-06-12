@@ -8,5 +8,8 @@ file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Picture:')"
 [ -z "$file" ] && exit
 
 
-#feh "$file" &
-$(echo "feh\nmirage\nmtpaint\nchromium" | dmenu) "$file" &
+#picture_viewer="feh"
+picture_viewer="$(echo 'feh\nmirage\nmtpaint\nchromium' | dmenu)"
+[ -z "$picture_viewer" ] && exit
+
+$picture_viewer "$file" &
