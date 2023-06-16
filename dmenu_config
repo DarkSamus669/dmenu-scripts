@@ -1,15 +1,23 @@
 #!/bin/sh
 
 
+
 cd "$HOME"
 
 
+# Prompt to select config file
 file="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.config/dmenu/dmenu_config")"
 [ -z "$file" ] && exit
 
 
+## Set editor
 #editor="st -e nano"
+
+## Select editor
 editor="$(echo 'st -e nano\nleafpad\ngeany' | dmenu)"
 [ -z "$editor" ] && exit
 
+
+
+# Open config file in editor
 $editor "$file" &

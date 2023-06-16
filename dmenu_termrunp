@@ -1,12 +1,13 @@
 #!/bin/sh
 
 
+
+# Prompt to select command
 cmd="$(dmenu_path | dmenu -l 8 -p '~>')"
 [ -z "$cmd" ] && exit
 
 
+
+# Execute command in terminal and pause
 st -t "$cmd" -e dash -c "$cmd; read -p ':' ''" &
 #st -t "$cmd" -e dash -c "echo '$ $cmd'; $cmd; read -p ':' ''" &
-
-#urxvt -T "$cmd" -e dash -c "$cmd; read -p ':' ''" &
-#urxvt -T "$cmd" -e dash -c "echo '$ $cmd'; $cmd; read -p ':' ''" &

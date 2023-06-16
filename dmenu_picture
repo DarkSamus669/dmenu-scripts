@@ -1,15 +1,23 @@
 #!/bin/sh
 
 
+
 cd "$HOME/Pictures"
 
 
+# Prompt to select picture
 file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Picture:')"
 [ -z "$file" ] && exit
 
 
+## Set picture viewer
 #picture_viewer="feh"
+
+## Select picture viewer
 picture_viewer="$(echo 'feh\nmirage\nmtpaint\nchromium' | dmenu)"
 [ -z "$picture_viewer" ] && exit
 
+
+
+# Open in picture viewer
 $picture_viewer "$file" &

@@ -4,12 +4,19 @@
 cd "$HOME/Videos"
 
 
+# Prompt to select video
 file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Video:')"
 [ -z "$file" ] && exit
 
 
+## Set video player
 #video_player="mpv"
+
+## Select video player
 video_player="$(echo 'mpv\nffplay\nchromium' | dmenu)"
 [ -z "$video_player" ] && exit
 
+
+
+# Open in video player
 $video_player "$file" &

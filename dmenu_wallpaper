@@ -1,12 +1,17 @@
 #!/bin/sh
 
 
+
 cd "$HOME/Pictures/Wallpapers"
 
 
+# Prompt to select wallpaper
 wall="$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Wallpaper:')"
 [ -z "$wall" ] && exit
 
+
+
+## Wallpaper Modes
 
 # feh
 mode=$(echo "fill\nscale\nmax\ntile\ncenter" | dmenu)
@@ -17,5 +22,8 @@ mode=$(echo "fill\nscale\nmax\ntile\ncenter" | dmenu)
 [ -z "$mode" ] && exit
 
 
+
+
+## Set wallpaper
 feh --bg-$mode "$wall" &
 #hsetroot -$mode "$wall" &

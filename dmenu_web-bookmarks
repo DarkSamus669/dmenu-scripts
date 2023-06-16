@@ -2,12 +2,19 @@
 
 
 
+# Prompt to select url
 url="$(dmenu -i -l 8 -p 'Web:' < "$HOME/.config/dmenu/dmenu_web-bookmarks")"
 [ -z "$url" ] && exit
 
 
+## Set web browser
 #web_browser="chromium"
+
+## Select web browser
 web_browser="$(echo 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu)"
 [ -z "$web_browser" ] && exit
 
+
+
+# Open in web browser
 $web_browser "$url" &
