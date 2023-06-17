@@ -2,6 +2,7 @@
 Scripts to open Video, Music, Documents, Config's, etc.
 
 
+
 | script                                                                                            | about                                                  |
 |---------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | [dmenu_manpage](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_manpage)             | _xmonad like manpage prompt_
@@ -19,19 +20,26 @@ Scripts to open Video, Music, Documents, Config's, etc.
 | [dmenu_package](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_package)           | _view info or run command on installed packages (currently supports apt but you can customize script according to your package manager)_
 
 
-_Customization can be done by editing scripts, like adding or changing directories used in find command._
+Customization can be done by editing scripts, like adding or changing directories used in find command.
+
+
+
+## Todo
+- [ ] Config files.
+- [ ] Optional command line arguments.
+
 
 
 ## Recommended
 
-_applications:_
+**applications:**
 ```dmenu``` ```st``` ```urxvt```
 
 
-_manpages:_
+**manpages:**
 ```find(1)``` ```dmenu(1)``` ```st(1)```
 
 
-_dmenu_patches:_
+**dmenu_patches:**
 ```separator```
 ​
