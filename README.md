@@ -27,7 +27,7 @@ Customization can be done by editing scripts, like adding or changing directorie
 ## Todo
 - [ ] Config files.
 - [ ] Optional command line arguments.
-- [ ] Add makefile or script for installation.
+- [ ] Makefile or script for installation.
 
 
 
