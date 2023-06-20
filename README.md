@@ -42,5 +42,5 @@ Customization can be done by editing scripts, like adding or changing directorie
 
 
 **dmenu_patches:**
-```separator```
+```separator``` ```printinputtext```
 ​
