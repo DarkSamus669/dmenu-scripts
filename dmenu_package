@@ -2,21 +2,18 @@
 
 
 
-# Prompt to select package
-package="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -s \
+PACKAGE="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -s \
                                                                         | dmenu -i -p 'Package:' -l 8 \
                                                                         | awk '{ print $1 }')"
-[ -z "$package" ] && exit
-
-
-## Set package command
-#package_command="apt show"
-
-## Select package command
-package_command="$(echo 'apt show\ndpkg -L' | dmenu -l 2)"
-[ -z "$package_command" ] && exit
+[ -z "$PACKAGE" ] && exit
 
 
 
-# Execute package command
-st -t "$package" -e dash -c "$package_command $package ; read -p ':' ''"  &
+#PACKAGE_COMMAND="apt show"
+
+PACKAGE_COMMAND="$(echo 'apt show\ndpkg -L' | dmenu -l 2)"
+[ -z "$PACKAGE_COMMAND" ] && exit
+
+
+
+st -t "$PACKAGE" -e dash -c "$PACKAGE_COMMAND $PACKAGE; read -p ':' ''"  &

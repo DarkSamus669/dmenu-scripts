@@ -5,18 +5,15 @@
 cd "$HOME"
 
 
-# Prompt to select project
-project="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.config/dmenu/dmenu_build")"
-[ -z "$project" ] && exit
 
-# Change directory to project
-cd "$project"
+PROJECT="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.config/dmenu/dmenu_build")"
+[ -z "$PROJECT" ] && exit
 
-# Prompt to select command
-cmd="$(echo "make all -j2\nmake clean\nsudo make install" | dmenu -l 3)"
-[ -z "$cmd" ] && exit
+cd "$PROJECT"
+
+CMD="$(echo "make all -j2\nmake clean\nsudo make install" | dmenu -l 3)"
+[ -z "$CMD" ] && exit
 
 
 
-# Execute command in terminal
-st -t "$project" -e dash -c "$cmd; read -p ':' ''"
+st -t "$PROJECT" -e dash -c "$CMD; read -p ':' ''"

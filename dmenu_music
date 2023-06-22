@@ -5,19 +5,18 @@
 cd "$HOME/Music"
 
 
-# Prompt to select music
-file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Music:')"
-[ -z "$file" ] && exit
 
-
-## Set music player
-#music_player="st -e mpv"
-
-## Select music player
-music_player="$(echo 'ffplay\nst -e mpv\ndeadbeef\nchromium' | dmenu)"
-[ -z "$music_player" ] && exit
+MUSIC_FILE="$(find -type f -not -path '*/.*' | sort \
+                                             | dmenu -i -l 8 -p 'Music:')"
+[ -z "$MUSIC_FILE" ] && exit
 
 
 
-# Open in music player
-$music_player "$file" &
+#MUSIC_PLAYER="st -e mpv"
+
+MUSIC_PLAYER="$(echo 'ffplay\nst -e mpv\ndeadbeef\nchromium' | dmenu)"
+[ -z "$MUSIC_PLAYER" ] && exit
+
+
+
+$MUSIC_PLAYER "$MUSIC_FILE" &

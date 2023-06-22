@@ -5,19 +5,18 @@
 cd "$HOME/Pictures"
 
 
-# Prompt to select picture
-file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Picture:')"
-[ -z "$file" ] && exit
 
-
-## Set picture viewer
-#picture_viewer="feh"
-
-## Select picture viewer
-picture_viewer="$(echo 'feh\nmirage\nmtpaint\nchromium' | dmenu)"
-[ -z "$picture_viewer" ] && exit
+PICTURE_FILE="$(find -type f -not -path '*/.*' | sort \
+                                               | dmenu -i -l 8 -p 'Picture:')"
+[ -z "$PICTURE_FILE" ] && exit
 
 
 
-# Open in picture viewer
-$picture_viewer "$file" &
+#PICTURE_VIEWER="feh"
+
+PICTURE_VIEWER="$(echo 'feh\nmirage\nmtpaint\nchromium' | dmenu)"
+[ -z "$PICTURE_VIEWER" ] && exit
+
+
+
+$PICTURE_VIEWER "$PICTURE_FILE" &

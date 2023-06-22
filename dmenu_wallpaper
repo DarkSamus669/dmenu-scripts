@@ -5,25 +5,22 @@
 cd "$HOME/Pictures/Wallpapers"
 
 
-# Prompt to select wallpaper
-wall="$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Wallpaper:')"
-[ -z "$wall" ] && exit
+
+WALLPAPER="$(find ./ /usr/share/wallpaper/ -type f -not -path '*/.*' | sort \
+                                                                     | dmenu -i -l 8 -p 'Wallpaper:')"
+[ -z "$WALLPAPER" ] && exit
 
 
-
-## Wallpaper Modes
 
 # feh
-mode=$(echo "fill\nscale\nmax\ntile\ncenter" | dmenu)
+WALLPAPER_MODE=$(echo "fill\nscale\nmax\ntile\ncenter" | dmenu)
 
 # hsetroot
-#mode=$(echo "fill\nfull\nextend\ntile\ncenter\ncover | dmenu)
+#WALLPAPER_MODE=$(echo "fill\nfull\nextend\ntile\ncenter\ncover | dmenu)
 
-[ -z "$mode" ] && exit
-
-
+[ -z "$WALLPAPER_MODE" ] && exit
 
 
-## Set wallpaper
-feh --bg-$mode "$wall" &
-#hsetroot -$mode "$wall" &
+
+feh --bg-${WALLPAPER_MODE} "$WALLPAPER" &
+#hsetroot -${WALLPAPER_MODE} "$WALLPAPER" &

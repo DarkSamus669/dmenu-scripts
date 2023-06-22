@@ -2,27 +2,21 @@
 
 
 
-# Prompt to set search
-web_search="$(dmenu -p 'Web Search:')"
-[ -z "$web_search" ] && exit
+WEB_SEARCH="$(dmenu -p 'Web Search:')"
+[ -z "$WEB_SEARCH" ] && exit
 
-# Prompt to select search engine
-search_engine="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.config/dmenu/dmenu_web-search")"
-[ -z "$search_engine"] && exit
+SEARCH_ENGINE="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.config/dmenu/dmenu_web-search")"
+[ -z "$SEARCH_ENGINE"] && exit
 
-# Append search text and search engine url
-web_search_url="$(echo "$search_engine" | awk -v web_search="$web_search" '{print $1 web_search $2}')"
+WEB_SEARCH_URL="$(echo "$SEARCH_ENGINE" | awk -v WEB_SEARCH="$WEB_SEARCH" '{print $1 WEB_SEARCH $2}')"
 
 
 
-## Set web browser
-web_browser="chromium"
+WEB_BROWSER="chromium"
 
-## Select web browser
-#web_browser="$(printf 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu) 
-[ -z "$web_browser" ] && exit
+#WEB_BROWSER="$(printf 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu)
+[ -z "$WEB_BROWSER" ] && exit
 
 
 
-# Open in web browser
-$web_browser "$web_search_url" &
+$WEB_BROWSER "$WEB_SEARCH_URL" &

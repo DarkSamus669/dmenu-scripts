@@ -2,11 +2,12 @@
 
 
 
-# Prompt to select manpage
-manpage="$(apropos . | sort | awk '{ print $1 " " $2 }' | dmenu -p 'Man:' -l 8)"
-[ -z "$manpage" ] && exit
+MANPAGE="$(apropos . | sort \
+                     | awk '{ print $1 " " $2 }' \
+                     | dmenu -p 'Man:' -l 8)"
+
+[ -z "$MANPAGE" ] && exit
 
 
 
-# Open manpage in terminal
-st -t "$manpage" -e man $manpage &
+st -t "$MANPAGE" -e man $MANPAGE &

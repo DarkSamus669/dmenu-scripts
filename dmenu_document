@@ -5,16 +5,16 @@
 cd "$HOME/Documents"
 
 
-# Prompt to select document
-file="$(find -type f -not -path '*/.*' | sort | dmenu -i -l 8 -p 'Document:')"
-[ -z "$file" ] && exit
 
-
-# Select document viewer
-document_viewer="$(echo 'chromium\nqpdfview\nzathura\nleafpad' | dmenu)"
-[ -z "$document_viewer" ] && exit
+DOCUMENT_FILE="$(find -type f -not -path '*/.*' | sort \
+                                                | dmenu -i -l 8 -p 'Document:')"
+[ -z "$DOCUMENT_FILE" ] && exit
 
 
 
-# Open in document viewer
-$document_viewer "$file" &
+DOCUMENT_VIEWER="$(echo 'chromium\nqpdfview\nzathura\nleafpad' | dmenu)"
+[ -z "$DOCUMENT_VIEWER" ] && exit
+
+
+
+$DOCUMENT_VIEWER "$DOCUMENT_FILE" &
