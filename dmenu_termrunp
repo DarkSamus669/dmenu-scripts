@@ -7,5 +7,5 @@ CMD="$(dmenu_path | dmenu -l 8 -p '~>')"
 
 
 
-st -t "$CMD" -e dash -c "$CMD; read -p ':' ''" &
-#st -t "$CMD" -e dash -c "echo '$ $CMD'; $CMD; read -p ':' ''" &
+st -t "$CMD" -e dash -c "$CMD; read -p ':' 'PROMPT'" &
+#st -t "$CMD" -e dash -c "echo '$ $CMD'; $CMD; read -p ':' 'PROMPT'" &
