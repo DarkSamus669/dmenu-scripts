@@ -38,7 +38,7 @@ Customization can be done by editing scripts, like adding or changing directorie
 
 
 **manpages:**
-```find(1)``` ```dmenu(1)``` ```st(1)```
+```find(1)``` ```dmenu(1)``` ```st(1)``` ```dash(1)```
 
 
 **dmenu_patches:**
