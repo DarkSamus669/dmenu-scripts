@@ -6,18 +6,18 @@ WEB_SEARCH="$(dmenu -p 'Web Search:')"
 [ -z "$WEB_SEARCH" ] && exit
 
 SEARCH_ENGINE="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.config/dmenu/dmenu_web-search")"
-[ -z "$SEARCH_ENGINE"] && exit
+[ -z "$SEARCH_ENGINE" ] && exit
 
-WEB_SEARCH_URL="$(echo "$SEARCH_ENGINE" | awk -v WEB_SEARCH="$WEB_SEARCH" '{print $1 WEB_SEARCH $2}')"
+WEB_SEARCH_URL="$(echo "$SEARCH_ENGINE" | awk -v SEARCH="$WEB_SEARCH" '{print $1 SEARCH $2}')"
 
 
 
 #WEB_BROWSER="chromium"
 
-WEB_BROWSER="$(printf "chromium\n`
-                      `seamonkey\n`
-                      `dillo\n`
-                      `st -e elinks" | dmenu)
+WEB_BROWSER="$(echo "chromium\n`
+                    `seamonkey\n`
+                    `dillo\n`
+                    `st -e elinks" | dmenu)"
 
 [ -z "$WEB_BROWSER" ] && exit
 
