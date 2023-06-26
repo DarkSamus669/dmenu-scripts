@@ -2,7 +2,7 @@
 
 
 
-PACKAGE="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -s \
+PACKAGE="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -u \
                                                                         | dmenu -i -p 'Package:' -l 8 \
                                                                         | awk '{ print $1 }')"
 [ -z "$PACKAGE" ] && exit
@@ -18,4 +18,4 @@ PACKAGE_COMMAND="$(echo "apt show\n`
 
 
 
-st -t "$PACKAGE" -e dash -c "$PACKAGE_COMMAND $PACKAGE; read -p ':' ''"  &
+st -t "$PACKAGE" -e dash -c "$PACKAGE_COMMAND $PACKAGE; read -p ':' 'PROMPT'"  &
