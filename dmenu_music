@@ -14,7 +14,11 @@ MUSIC_FILE="$(find -type f -not -path '*/.*' | sort \
 
 #MUSIC_PLAYER="st -e mpv"
 
-MUSIC_PLAYER="$(echo 'ffplay\nst -e mpv\ndeadbeef\nchromium' | dmenu)"
+MUSIC_PLAYER="$(echo "ffplay\n`
+                     `st -e mpv\n`
+                     `deadbeef\n`
+                     `chromium"     | dmenu)"
+
 [ -z "$MUSIC_PLAYER" ] && exit
 
 

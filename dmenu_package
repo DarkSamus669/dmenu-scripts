@@ -11,7 +11,9 @@ PACKAGE="$(dpkg-query --show -f '${source:Package} ${source:Version}\n' | sort -
 
 #PACKAGE_COMMAND="apt show"
 
-PACKAGE_COMMAND="$(echo 'apt show\ndpkg -L' | dmenu -l 2)"
+PACKAGE_COMMAND="$(echo "apt show\n`
+                        `dpkg -L"   | dmenu -l 2)"
+
 [ -z "$PACKAGE_COMMAND" ] && exit
 
 

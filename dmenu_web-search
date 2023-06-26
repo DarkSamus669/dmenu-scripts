@@ -12,9 +12,13 @@ WEB_SEARCH_URL="$(echo "$SEARCH_ENGINE" | awk -v WEB_SEARCH="$WEB_SEARCH" '{prin
 
 
 
-WEB_BROWSER="chromium"
+#WEB_BROWSER="chromium"
 
-#WEB_BROWSER="$(printf 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu)
+WEB_BROWSER="$(printf "chromium\n`
+                      `seamonkey\n`
+                      `dillo\n`
+                      `st -e elinks" | dmenu)
+
 [ -z "$WEB_BROWSER" ] && exit
 
 

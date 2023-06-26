@@ -13,7 +13,10 @@ CONFIG_FILE="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.config/dmenu/dmenu_config")"
 
 #CONFIG_EDITOR="st -e nano"
 
-CONFIG_EDITOR="$(echo 'st -e nano\nleafpad\ngeany' | dmenu)"
+CONFIG_EDITOR="$(echo "st -e nano\n`
+                      `leafpad\n`
+                      `geany"       | dmenu)"
+
 [ -z "$CONFIG_EDITOR" ] && exit
 
 

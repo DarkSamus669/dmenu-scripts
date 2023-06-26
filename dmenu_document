@@ -12,7 +12,11 @@ DOCUMENT_FILE="$(find -type f -not -path '*/.*' | sort \
 
 
 
-DOCUMENT_VIEWER="$(echo 'chromium\nqpdfview\nzathura\nleafpad' | dmenu)"
+DOCUMENT_VIEWER="$(echo "chromium\n`
+                        `qpdfview\n`
+                        `zathura\n`
+                        `leafpad"   | dmenu)"
+
 [ -z "$DOCUMENT_VIEWER" ] && exit
 
 

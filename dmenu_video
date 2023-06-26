@@ -14,7 +14,10 @@ VIDEO_FILE="$(find -type f -not -path '*/.*' | sort \
 
 #VIDEO_PLAYER="mpv"
 
-VIDEO_PLAYER="$(echo 'mpv\nffplay\nchromium' | dmenu)"
+VIDEO_PLAYER="$(echo "mpv\n`
+                     `ffplay\n`
+                     `chromium" | dmenu)"
+
 [ -z "$VIDEO_PLAYER" ] && exit
 
 

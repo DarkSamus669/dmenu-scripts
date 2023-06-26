@@ -14,7 +14,11 @@ PICTURE_FILE="$(find -type f -not -path '*/.*' | sort \
 
 #PICTURE_VIEWER="feh"
 
-PICTURE_VIEWER="$(echo 'feh\nmirage\nmtpaint\nchromium' | dmenu)"
+PICTURE_VIEWER="$(echo "feh\n`
+                       `mirage\n`
+                       `mtpaint\n`
+                       `chromium" | dmenu)"
+
 [ -z "$PICTURE_VIEWER" ] && exit
 
 

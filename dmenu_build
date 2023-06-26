@@ -11,7 +11,12 @@ PROJECT="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.config/dmenu/dmenu_build")"
 
 cd "$PROJECT"
 
-CMD="$(echo "git status\ngit diff\nmake all -j2\nmake clean\nsudo make install" | dmenu -l 5)"
+CMD="$(echo "git status\n`
+            `git diff\n`
+            `make all -j2\n`
+            `make clean\n`
+            `sudo make install" | dmenu -l 5)"
+
 [ -z "$CMD" ] && exit
 
 

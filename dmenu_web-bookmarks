@@ -9,7 +9,11 @@ WEB_URL="$(dmenu -i -l 8 -p 'Web:' < "$HOME/.config/dmenu/dmenu_web-bookmarks")"
 
 #WEB_BROWSER="chromium"
 
-WEB_BROWSER="$(echo 'chromium\nseamonkey\ndillo\nst -e elinks' | dmenu)"
+WEB_BROWSER="$(echo "chromium\n`
+                    `seamonkey\n`
+                    `dillo\n`
+                    `st -e elinks" | dmenu)"
+
 [ -z "$WEB_BROWSER" ] && exit
 
 
