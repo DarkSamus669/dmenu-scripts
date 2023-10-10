@@ -6,7 +6,7 @@ cd "$HOME"
 
 
 
-PROJECT="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.config/dmenu/dmenu_build")"
+PROJECT="$(dmenu -i -l 8 -p 'Build:' < "$HOME/.local/share/dmenu/dmenu_build")"
 [ -z "$PROJECT" ] && exit
 
 cd "$PROJECT"

@@ -6,7 +6,7 @@ cd "$HOME"
 
 
 
-CONFIG_FILE="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.config/dmenu/dmenu_config")"
+CONFIG_FILE="$(dmenu -i -l 8 -p 'Config:' < "$HOME/.local/share/dmenu/dmenu_config")"
 [ -z "$CONFIG_FILE" ] && exit
 
 

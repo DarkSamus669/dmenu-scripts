@@ -2,7 +2,7 @@
 
 
 
-WEB_URL="$(dmenu -i -l 8 -p 'Web:' < "$HOME/.config/dmenu/dmenu_web-bookmarks")"
+WEB_URL="$(dmenu -i -l 8 -p 'Web:' < "$HOME/.local/share/dmenu/dmenu_web-bookmarks")"
 [ -z "$WEB_URL" ] && exit
 
 

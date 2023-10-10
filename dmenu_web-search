@@ -5,7 +5,7 @@
 WEB_SEARCH="$(dmenu -p 'Web Search:')"
 [ -z "$WEB_SEARCH" ] && exit
 
-SEARCH_ENGINE="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.config/dmenu/dmenu_web-search")"
+SEARCH_ENGINE="$(dmenu -i -l 8 -p 'Search in:' < "$HOME/.local/share/dmenu/dmenu_web-search")"
 [ -z "$SEARCH_ENGINE" ] && exit
 
 WEB_SEARCH_URL="$(echo "$SEARCH_ENGINE" | awk -v SEARCH="$WEB_SEARCH" '{print $1 SEARCH $2}')"

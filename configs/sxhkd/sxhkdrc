@@ -2,12 +2,12 @@
 
 
 {alt + shift,super} + p
-	$HOME/Scripts/dmenu/dmenu_{termrun,termrunp}
+	$HOME/.local/bin/dmenu_{termrun,termrunp}
 
 
 alt + super + {v,i,d,o,n,p}
-	$HOME/Scripts/dmenu/dmenu_{video,picture,document,config,music,package}
+	$HOME/.local/bin/dmenu_{video,picture,document,config,music,package}
 
 
 alt + super + {w,m,g,h,b}
-	$HOME/Scripts/dmenu/dmenu_{wallpaper,manpage,web-bookmarks,web-search,build}
+	$HOME/.local/bin/dmenu_{wallpaper,manpage,web-bookmarks,web-search,build}
