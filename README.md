@@ -9,6 +9,7 @@ Scripts to open Video, Music, Documents, Config's, etc.
 | [dmenu_video](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_video)                 | _prompt to launch videos in specified video dirs_
 | [dmenu_music](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_music)                 | _prompt to launch music in specified music dirs_
 | [dmenu_document](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_document)           | _prompt to launch document in specified document dirs_
+| [dmenu_flatpak](dmenu_flatpak)                                                                    | list and run your installed flatpak packages
 | [dmenu_picture](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_picture)             | _prompt to launch images in specified picture dirs_
 | [dmenu_wallpaper](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_wallpaper)         | _set wallpaper available in specified wallpaper dirs_
 | [dmenu_web-bookmarks](https://github.com/DarkSamus669/dmenu-scripts/raw/main/dmenu_web-bookmarks) | _simple prompt to open web bookmarks_
