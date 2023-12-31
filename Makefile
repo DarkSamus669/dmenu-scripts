@@ -2,6 +2,7 @@ INSTALL_DIR		= ${HOME}/.local/bin
 CONFIG_DIR		= ${HOME}/.local/share
 
 install:
+
 	# Install scripts
 	cp dmenu_* "$(INSTALL_DIR)"
 
@@ -14,6 +15,7 @@ uninstall:
 	rm "$(INSTALL_DIR)/dmenu_build" \
 	   "$(INSTALL_DIR)/dmenu_config" \
 	   "$(INSTALL_DIR)/dmenu_document" \
+	   "$(INSTALL_DIR)/dmenu_flatpak" \
 	   "$(INSTALL_DIR)/dmenu_manpage" \
 	   "$(INSTALL_DIR)/dmenu_music" \
 	   "$(INSTALL_DIR)/dmenu_package" \
